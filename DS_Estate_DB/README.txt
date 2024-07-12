@@ -1,0 +1,1 @@
+You can either import ds_estate.sql after making a new db in sql, which will immediately create all the other tables as well, or import them on by one. I just decided to send everything since I didn't know which is the best way.
