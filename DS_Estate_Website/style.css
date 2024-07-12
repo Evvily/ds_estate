@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/* For all Interfaces */
+
+/* Remove default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 24px;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin: 0 15px;
+}
+
+nav .nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav .nav-links a:hover {
+    background-color: #444;
+}
+
+/* Hamburger Menu Icon */
+.menu-toggle {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Initially hide on larger screens */
+}
+
+/* Hide the logout button by default */
+#logoutButtonForm {
+    display: none;
+}
+
+/* Show form */
+.show {
+    display: block !important;
+}
+
+/* Hide form */
+.hide {
+    display: none !important;
+}
+
+/* Media Query for Mobile View */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show hamburger icon on smaller screens */
+    }
+
+    nav .nav-links {
+        display: none; /* Hide nav links by default on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    nav .nav-links.active {
+        display: flex; /* Show nav links when active */
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.footer-content {
+	display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
+.contact-details a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.map iframe {
+    width: 100%;
+    height: 200px;
+}
+
+/* Responsive footer */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}

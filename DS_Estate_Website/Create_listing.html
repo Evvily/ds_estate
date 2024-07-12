@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS Estate - Create Listing</title>
+	
+	<!-- The css files needed -->
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="listing-style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- For hamburger menu (bars) on small screens -->
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">DS Estate</div>
+		
+        <!-- Hamburger Icon for Mobile -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+		
+        <ul class="nav-links" id="nav-links">
+            <li><a href="Feed.php">Feed</a></li>
+            <li><a href="Create_Listing.html">Create Listing</a></li>
+			
+			<li id="loginButtonForm">
+				<div class="button-link">
+                    <p><a href="Login.html" id="showloginButtonForm">Login</a></p>
+                </div>
+			</li>
+			
+			<li id="logoutButtonForm" style="display: none;">
+				<div class="button-link">
+                    <p><a href="logout.php" id="showlogoutButtonForm">Logout</a></p>
+                </div>
+			</li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="wrapper">
+            <form id="listingForm">
+                <h3>Create New Listing</h3>				
+				<div class="input-box">
+					<label for="title">Title:</label>
+					<input type="text" id="title" name="title" required>
+                </div>
+				
+				<div class="input-box">
+					<label for="region">Region:</label>
+					<input type="text" id="region" name="region" required>
+                </div>
+				
+				<div class="input-box">
+					<label for="rooms">Number of rooms:</label>
+					<input type="number" id="rooms" name="rooms" required>
+                </div>
+				
+				<div class="input-box">
+					<label for="price">Price per night:</label>
+					<input type="number" id="price" name="price" required>
+                </div>
+				
+				<div class="input-box">
+					<label for="photo">Photo:</label>
+					<input type="file" id="photo" name="photo" accept="image/*" required>
+                </div>
+				
+                <button type="submit" class="btn">Create Listing</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+	<footer>
+		<div class="footer-content">
+			<div class="contact-details">
+				<p>DS Estate</p>
+				<p><a href="tel:+1234567890">+1 234 567 890</a></p>
+				<p><a href="mailto:info@dsestate.com">info@dsestate.com</a></p>
+				<p>&copy; 2024 DS Estate. All rights reserved.</p>
+			</div>
+			<div class="map">
+				<iframe 
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.521770723334!2d23.65040437574289!3d37.94160127194379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bbe5bb8515a1%3A0x3e0dce8e58812705!2zzqDOsc69zrXPgM65z4PPhM6uzrzOuc6_IM6gzrXOuc-BzrHOuc-Oz4I!5e0!3m2!1sel!2sgr!4v1718471912350!5m2!1sel!2sgr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+					width="400" 
+					height="300" 
+					style="border:0;" 
+					allowfullscreen="" 
+					loading="lazy">
+				</iframe>
+			</div>
+		</div>
+	</footer>
+	
+	<!-- The js files needed -->
+    <script src="handle.js"></script>
+	<script src="listing-handle.js"></script>
+	
+</body>
+</html>

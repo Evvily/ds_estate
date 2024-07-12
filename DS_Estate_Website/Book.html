@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS Estate - Book Property</title>
+    
+	<!-- The css files needed -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="book-style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- For hamburger menu (bars) on small screens -->
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">DS Estate</div>
+		
+        <!-- Hamburger Icon for Mobile -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+		
+        <ul class="nav-links" id="nav-links">
+            <li><a href="Feed.php">Feed</a></li>
+            <li><a href="Create_Listing.html">Create Listing</a></li>
+			
+			<li id="loginButtonForm">
+				<div class="button-link">
+                    <p><a href="Login.html" id="showloginButtonForm">Login</a></p>
+                </div>
+			</li>
+			
+			<li id="logoutButtonForm" style="display: none;">
+				<div class="button-link">
+                    <p><a href="logout.php" id="showlogoutButtonForm">Logout</a></p>
+                </div>
+			</li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="property-details">
+            <h2>Property Details</h2>
+            <img id="property-photo" src="#" alt="Property Photo">
+            <p id="property-title"></p>
+            <p id="property-area"></p>
+            <p id="property-rooms"></p>
+            <p id="property-price"></p>
+        </div>
+
+        <div class="booking-form-container">
+            <form id="booking-step1">
+			<!-- Step 1: Select Dates -->
+                <div id="step-1">
+                    <h3>Step 1: Select Dates</h3>
+					<label for="start_date">Start Date:</label>
+					<input type="date" id="start_date" name="start_date" required>
+				
+					<label for="end_date">End Date:</label>
+					<input type="date" id="end_date" name="end_date" onchange="validateDates()" required>
+					
+					<button type="submit" >Check Availability</button>
+                </div>
+			</form>
+			
+			<form id="booking-step2">
+			<!-- Step 2: User Details -->
+                <div id="step-2" style="display: none;">
+                    <h3>Step 2: Confirm Details</h3>
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name">
+					
+					<label for="surname">Surname:</label>
+					<input type="text" id="surname" name="surname">
+					
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" readonly>
+					
+					<input type="hidden" id="property-id" name="property-id">
+					<p id="final-amount">Final Amount: $0.00</p>
+					<button type="submit" >Book Now</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+	<footer>
+		<div class="footer-content">
+			<div class="contact-details">
+				<p>DS Estate</p>
+				<p><a href="tel:+1234567890">+1 234 567 890</a></p>
+				<p><a href="mailto:info@dsestate.com">info@dsestate.com</a></p>
+				<p>&copy; 2024 DS Estate. All rights reserved.</p>
+			</div>
+			<div class="map">
+				<iframe 
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.521770723334!2d23.65040437574289!3d37.94160127194379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bbe5bb8515a1%3A0x3e0dce8e58812705!2zzqDOsc69zrXPgM65z4PPhM6uzrzOuc6_IM6gzrXOuc-BzrHOuc-Oz4I!5e0!3m2!1sel!2sgr!4v1718471912350!5m2!1sel!2sgr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+					width="400" 
+					height="300" 
+					style="border:0;" 
+					allowfullscreen="" 
+					loading="lazy">
+				</iframe>
+			</div>
+		</div>
+	</footer>
+	
+	<!-- The js files needed -->
+    <script src="handle.js"></script>
+	<script src="book-handle.js"></script>
+	
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* For Interface 3: Book */
+
+body {
+    background-color: #f4f4f4;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Property Details */
+.property-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+ 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+ 
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+
+.property-details img {
+    grid-column: span 2; /* Image spans both columns */
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.property-details p {
+    margin: 5px 0;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Booking Form */
+.booking-form-container {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+				   
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+#final-amount {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .property-details {
+        width: 100%;
+        padding: 10px;
+    }
+	
+	.property-details h2 {
+		font-size: 1.1em;
+    }
+
+    .booking-form-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    form input {
+        width: 100%;
+    }
+}

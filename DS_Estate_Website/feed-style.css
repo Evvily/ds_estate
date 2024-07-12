@@ -1,0 +1,101 @@
+/* For Interface 1: Feed */
+
+main {
+    padding: 20px;
+}
+
+body {
+	background-color: #f0f2f5;
+}
+
+/* Property list container */
+.property-list {
+    display: flex;
+    flex-wrap: wrap;
+	gap: 50px;
+	justify-content: space-evenly;
+	padding-top: 30px;
+}
+
+/* Property box styling */
+.property-list .box {
+    display: grid;
+	grid-template-columns: 1fr 1fr;  /* Two equal columns */
+    grid-template-rows: auto auto auto auto auto;
+	gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+	
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* shadow for depth */
+    background-color: #fff;
+	
+	width: 42.5%;
+    height: 400px;
+}
+
+.property-list .box img {
+    grid-column: span 2;  /* Image spans both columns */
+    width: 100%;
+	object-fit: cover;
+    height: 250px;
+}
+
+.property-list .box p {
+    margin: 0;
+    font-size: 1em;
+	text-align: center;
+}
+
+/* Specific styles for different p elements */
+.property-list .box p:nth-of-type(1) {
+    grid-row: 2;  /* First p element in the second row */
+}
+
+.property-list .box p:nth-of-type(2) {
+    grid-row: 2;  /* Second p element in the second row */
+}
+
+.property-list .box p:nth-of-type(3) {
+    grid-row: 3;  /* Third p element in the third row */
+}
+
+.property-list .box p:nth-of-type(4) {
+    grid-row: 3;  /* Fourth p element in the third row */
+}
+
+/* Reserve button styling */
+.property-list .box a {
+    grid-row: 5;  /* Button in the fifth row */
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.reserve-btn {
+    width: 50%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+	
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.reserve-btn:hover {
+    background-color: #0056b3;
+}
+	
+/* For mobile view */
+@media screen and (max-width: 768px) {
+    .property-list .box {
+        width: 100%;
+    }
+}
